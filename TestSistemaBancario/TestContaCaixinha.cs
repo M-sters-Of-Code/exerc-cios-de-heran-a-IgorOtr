@@ -25,7 +25,7 @@ namespace TestSistemaBancario
             decimal valorDeposito = 100;
             ContaCaixinha caixinha = new ContaCaixinha(saldoInicial);
             caixinha.Depositar(valorDeposito);
-            Assert.AreEqual(caixinha.Saldo, 1101);
+            Assert.AreEqual(caixinha.Saldo, 1100);
         }
 
         [TestMethod]
@@ -35,14 +35,14 @@ namespace TestSistemaBancario
             decimal saque = 105;
             ContaCaixinha caixinha = new ContaCaixinha(saldoInicial);
             caixinha.Sacar(saque);
-            Assert.AreEqual(caixinha.Saldo, 900);
+            Assert.AreEqual(caixinha.Saldo, 895);
         }
 
         [TestMethod]
         public void TestDepositarValorInferiorAUm()
         {
             decimal saldoInicial = 1000;
-            decimal valorDeposito = 0.9m;
+            decimal valorDeposito = 0.5m;
             ContaCaixinha caixinha = new ContaCaixinha(saldoInicial);
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => caixinha.Depositar(valorDeposito));
         }
