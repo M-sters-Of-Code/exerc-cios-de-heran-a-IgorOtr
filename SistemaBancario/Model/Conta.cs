@@ -30,7 +30,9 @@ namespace SistemaBancario.Model
         {
             if (valor <= 1)
                 throw new ArgumentOutOfRangeException("O valor do depósito deve ser maior que um.");
-            Saldo += valor; // Saldo = Saldo + valor;
+            decimal bonus = 1;
+            decimal valorMaisBonus = valor + bonus;
+            Saldo += valorMaisBonus; // Saldo = Saldo + valor;
         }
 
         public virtual void Sacar(decimal valor)

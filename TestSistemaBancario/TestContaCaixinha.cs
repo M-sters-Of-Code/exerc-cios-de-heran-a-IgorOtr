@@ -25,7 +25,7 @@ namespace TestSistemaBancario
             decimal valorDeposito = 100;
             ContaCaixinha caixinha = new ContaCaixinha(saldoInicial);
             caixinha.Depositar(valorDeposito);
-            Assert.AreEqual(caixinha.Saldo, 1100);
+            Assert.AreEqual(caixinha.Saldo, 1101);
         }
 
         [TestMethod]
